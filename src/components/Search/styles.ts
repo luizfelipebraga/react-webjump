@@ -1,19 +1,21 @@
 import styled from 'styled-components';
-
-
 export const BoxInputSearch = styled.div`
   display: flex;
   align-items: center;
-  div {
-    span {
-      color: #fff;
-      font-size: 2rem;
-    }
-  }
 `;
 
 export const InputStyled = styled.input`
-  color: #000;
-  border: 1px solid #000;
-  padding: 2rem;
+  color: var(--black);
+  width: 414px;
+  border: 1px solid var(--black);
+  padding: .7rem;
 `;
+
+export const Button = styled.button`
+  color: var(--textWhite);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: .65rem 1.5rem;
+  cursor: pointer;
+`

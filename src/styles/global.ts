@@ -14,7 +14,14 @@ export const GlobalStyle = createGlobalStyle`
 	    scroll-behavior: smooth;
     }
     :root {
-        
+      --black: #000;
+      --textWhite: #ffffff;
+      --textBold: 700;
+      --textSuperBold: 800;
+      --textGray: #949494;
+      --lightRed: #E50019;
+      --darkRed: #CB0D1F;
+      
     }
     
     html, body, #root {
@@ -27,28 +34,24 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
     }
     h1, h2, h3, h4, h5 {
-        color: #ffffff;
+        color: var(--textWhite);
     }
      span, button, p  {
         font-family: 'Open Sans', sans-serif;
-        color: #949494;
+        color: var(--textGray);
     }
     b, strong {
-        color: #ffffff;
+        color: var(--textWhite);
     }
     textarea {
         resize: none;
     }
-    input, textarea {
-        &:focus-within {
-            border: 2px solid #838383;
-        }
-    }
+
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-        color: #fff;
+        color: var(--textWhite);
         transition: all 5000s ease-in-out 0s;
     }
     textarea, select, input, textarea, select:focus, button{
@@ -65,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     ul {
-        color: #000;
+        color: var(--black);
     }
 
     @media (max-width: 1440px) {

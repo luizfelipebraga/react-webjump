@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -8,17 +8,57 @@ export const Container = styled.div`
 
 export const AuthBar = styled.header`
   width: 100%;
-  background-color: #000;
+  background-color: var(--black);
+`;
 
+export const BoxAuth = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  padding-right: 5rem;
   gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+
+  a,
+  span {
+    color: var(--textWhite);
+    :not(span) {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const Box = styled.div`
   padding: 0 2rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+`;
+
+export const Logo = styled.div`
+  span {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: var(--textSuperBold);
+    &:first-child {
+      color: var(--lightRed);
+    }
+
+    &:nth-child(2) {
+      color: var(--black);
+    }
+
+    &:nth-child(3) {
+      display: inline-block;
+      color: var(--lightRed);
+      transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+    }
+  }
 `;
