@@ -25,14 +25,12 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     html, body, #root {
-        min-height: 100vh;
+        height: 100vh;
         width : 100%;
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
-    section {
-        position: relative;
-    }
+    
     h1, h2, h3, h4, h5 {
         color: var(--textWhite);
     }

@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
-`
+  min-height: 100vh;
+`;
 
 export const Content = styled.main`
-  width: 100%;
+  height: 70vh;
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 0 auto;
 
   padding: 2rem 0;
+  
 `;

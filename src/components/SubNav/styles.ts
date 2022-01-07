@@ -6,7 +6,7 @@ export const Container = styled.header`
 `;
 
 export const Nav = styled.nav`
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 7rem;
@@ -19,5 +19,18 @@ export const Nav = styled.nav`
     color: var(--textWhite);
     font-weight: var(--textSuperBold);
     text-transform: uppercase;
+    &:after {
+        content: '';
+        color: #fff;
+        width: 0px;
+        height: 2px;
+        display: block;
+        background: black;
+        transition: 300ms;
+      }
+      &:hover::after {
+        width: 100%;
+        background: #fff;
+      }
   }
 `;

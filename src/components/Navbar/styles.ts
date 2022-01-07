@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  position: fixed;
 `;
 
 export const AuthBar = styled.header`
@@ -17,7 +16,7 @@ export const BoxAuth = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   gap: 1rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 0;
 
@@ -36,7 +35,7 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
 `;
