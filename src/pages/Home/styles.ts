@@ -15,13 +15,13 @@ export const Container = styled.section`
 export const Aside = styled.aside`
   background: #E2DEDC;
   width: 15rem;
-  height: 100%;
-
+  
   padding: 1rem;
-
+  
   display: flex;
-  gap: 1rem;
+  align-self: stretch;
   flex-direction: column;
+  gap: 1rem;
 
   a {
     list-style: square inside !important;
@@ -31,9 +31,6 @@ export const Aside = styled.aside`
 
 export const Main = styled.main`
   width: 100%;
-  height: 100%;
-
-  padding: 1rem 0;
 `;
 
 export const Banner = styled.div`
