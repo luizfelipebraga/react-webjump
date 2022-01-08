@@ -6,9 +6,13 @@ export const BoxInputSearch = styled.div`
 
 export const InputStyled = styled.input`
   color: var(--black);
-  width: 414px;
+  width: 25rem;
   border: 1px solid var(--black);
   padding: .7rem;
+
+  @media (max-width: 768px) {
+    width: 10rem;
+  }
 `;
 
 export const Button = styled.button`

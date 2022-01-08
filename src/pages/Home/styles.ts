@@ -8,6 +8,8 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: row;
   gap: 2rem;
+
+  padding: 0 2rem;
 `;
 
 export const Aside = styled.aside`
@@ -30,12 +32,14 @@ export const Aside = styled.aside`
 export const Main = styled.main`
   width: 100%;
   height: 100%;
+
+  padding: 1rem 0;
 `;
 
 export const Banner = styled.div`
   background-color: var(--textGray);
   width: 100%;
-  height: 50%;
+  height: 20rem;
 `;
 
 export const Content = styled.div`
@@ -49,6 +53,7 @@ export const Content = styled.div`
 
   p {
     color: var(--black);
+    padding-bottom: 2rem;
   }
 
 `;

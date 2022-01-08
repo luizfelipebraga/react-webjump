@@ -12,10 +12,15 @@ export const Nav = styled.nav`
   gap: 7rem;
   align-items: center;
 
-  padding: 1.5rem 0;
+  padding: 1.5rem 2rem;
+
+  @media (max-width: 1024px) {
+    gap: 5rem;
+  }
 
   a {
     font-size: 1.2rem;
+    white-space: nowrap;
     color: var(--textWhite);
     font-weight: var(--textSuperBold);
     text-transform: uppercase;

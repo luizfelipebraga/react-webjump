@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 	    scroll-behavior: smooth;
     }
     :root {
-      --black: #000;
+      --black: #231F20;
       --textWhite: #ffffff;
       --textBold: 700;
       --textSuperBold: 800;
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     html, body, #root {
-        height: 100vh;
+        min-height: 100vh;
         width : 100%;
         overflow-x: hidden;
         scroll-behavior: smooth;
@@ -76,18 +76,18 @@ export const GlobalStyle = createGlobalStyle`
     }
     @media (max-width: 1024px) {
         html {
-            font-size: 80%;
+            /* font-size: 80%; */
         }
     }
     @media (max-width: 768px) {
         html {
-            font-size: 75%;
+            /* font-size: 75%; */
         }
     }
 
     @media (max-width: 320px) {
         html {
-            font-size: 65%;
+            /* font-size: 65%; */
         }
     }
 `

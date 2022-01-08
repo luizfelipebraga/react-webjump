@@ -18,7 +18,7 @@ export const BoxAuth = styled.div`
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2rem;
 
   a,
   span {
@@ -37,12 +37,13 @@ export const Box = styled.div`
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
 `;
 
 export const Logo = styled.div`
   span {
     font-size: 3rem;
+    white-space: nowrap;
     text-transform: uppercase;
     font-weight: var(--textSuperBold);
     &:first-child {
@@ -58,6 +59,10 @@ export const Logo = styled.div`
       color: var(--lightRed);
       transform: rotate(20deg);
       -moz-transform: rotate(20deg);
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 2.5rem;
     }
   }
 `;
