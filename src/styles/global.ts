@@ -53,13 +53,11 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--textWhite);
         transition: all 5000s ease-in-out 0s;
     }
-    textarea, select, input, textarea, select:focus, button{
+    textarea, input, textarea, button{
         border: 0;
         outline: none;
     }
     a {
-        list-style: none;
-        text-decoration: none;
         cursor: pointer;
     }
     *, button, input {

@@ -23,7 +23,7 @@ export const Button = styled.button`
   color: var(--textWhite);
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 1rem;
-  padding: .65rem 1.5rem;
+  font-size: 1rem !important;
+  padding: .7rem 1.5rem !important;
   cursor: pointer;
 `;
