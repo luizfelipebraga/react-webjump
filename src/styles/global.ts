@@ -21,7 +21,8 @@ export const GlobalStyle = createGlobalStyle`
       --textGray: #949494;
       --lightRed: #E50019;
       --darkRed: #CB0D1F;
-      
+      --lightGreen: #00A8A9;
+      --darkBlue: #1E2B50;
     }
     
     html, body, #root {
