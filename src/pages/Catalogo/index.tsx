@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { CardCategory } from "../../components/Card";
+import { api } from "../../services/api";
 import {
   Container,
   PagRef,
@@ -18,24 +20,38 @@ import {
   BoxSelect,
 } from "./styles";
 
-export function Catalogo() {
+interface ListProps {
+  img: string;
+  name: string;
+  price: string;
+}
+
+interface CatalogoProps {
+  title?: string;
+  id: string;
+}
+
+export function Catalogo(props: CatalogoProps) {
   const typeCategory = [
     {
       id: "1",
       name: "Roupas",
+      path: "/roupas",
       value: "roupas",
     },
 
     {
       id: "2",
-      name: "Sapatos",
-      value: "sapatos",
+      name: "Calças",
+      path: "/calcas",
+      value: "calcas",
     },
 
     {
       id: "3",
-      name: "Acessório",
-      value: "acessorios",
+      name: "Calçados",
+      path: "/calcados",
+      value: "calcados",
     },
   ];
 
@@ -79,12 +95,30 @@ export function Catalogo() {
     },
   ];
 
+  function ListAll() {
+    api
+      .get(props.id)
+      .then((resp) => {
+        setList(resp.data);
+      })
+      .catch((err) => console.error(err));
+  }
+
+  useEffect(() => {
+    ListAll();
+    return () => {
+      setList([]);
+    };
+  }, []);
+
+  const [list, setList] = useState<ListProps[]>([]);
   const [order, setOrder] = useState<string>("price");
 
   return (
     <Container>
       <PagRef>
-        <span>Página inicial</span> <span> &#62; </span> <span>Sapatos</span>
+        <span>Página inicial</span> <span>&#62;</span>
+        <span>{props.title}</span>
       </PagRef>
 
       <Content>
@@ -95,7 +129,7 @@ export function Catalogo() {
             <SubTitle>categorias</SubTitle>
             <List>
               {typeCategory.map((category) => (
-                <a key={category.id}>{category.name}</a>
+                <a key={category.id} href={category.path}>{category.name}</a>
               ))}
             </List>
           </Box>
@@ -121,7 +155,7 @@ export function Catalogo() {
         </Aside>
 
         <Main>
-          <Title>Sapatos</Title>
+          <Title>{props.title}</Title>
           <hr />
 
           <BoxSelect>
