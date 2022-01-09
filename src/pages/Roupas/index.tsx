@@ -1,8 +1,5 @@
+import { Catalogo } from "../Catalogo";
 
 export function RoupasPage() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <Catalogo id="1" title="Roupas"  />;
 }

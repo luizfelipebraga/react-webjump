@@ -21,9 +21,11 @@ import {
 } from "./styles";
 
 interface ListProps {
-  img: string;
+  id: number;
+  image: string;
   name: string;
-  price: string;
+  price: number;
+  path: string;
 }
 
 interface CatalogoProps {
@@ -36,7 +38,7 @@ export function Catalogo(props: CatalogoProps) {
     {
       id: "1",
       name: "Roupas",
-      path: "/roupas",
+      path: "/camisetas",
       value: "roupas",
     },
 
@@ -99,7 +101,7 @@ export function Catalogo(props: CatalogoProps) {
     api
       .get(props.id)
       .then((resp) => {
-        setList(resp.data);
+        setList(resp.data.items);
       })
       .catch((err) => console.error(err));
   }
@@ -112,6 +114,7 @@ export function Catalogo(props: CatalogoProps) {
   }, []);
 
   const [list, setList] = useState<ListProps[]>([]);
+  console.log(list);
   const [order, setOrder] = useState<string>("price");
 
   return (
