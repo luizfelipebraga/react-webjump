@@ -1,4 +1,4 @@
-{
+export const v2 = {
   "filters": [
       {
           "gender": "Gênero"

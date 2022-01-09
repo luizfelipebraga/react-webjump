@@ -1,4 +1,4 @@
-{
+export const v1 = {
   "filters": [
       {
           "color": "Cor"

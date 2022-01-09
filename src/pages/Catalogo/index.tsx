@@ -1,8 +1,9 @@
+import { Container } from "./styles";
 
 export function Catalogo() {
   return (
-    <div>
+    <Container>
       
-    </div>
+    </Container>
   )
 }
