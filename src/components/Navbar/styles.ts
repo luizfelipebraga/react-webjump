@@ -65,4 +65,10 @@ export const Logo = styled.div`
       font-size: 2.5rem;
     }
   }
+
+  @media (max-width: 380px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    }
 `;

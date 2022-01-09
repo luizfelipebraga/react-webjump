@@ -18,6 +18,10 @@ export const Nav = styled.nav`
     gap: 5rem;
   }
 
+  @media (max-width: 480px) {
+    display: none;
+  }
+
   a {
     font-size: 1.2rem;
     white-space: nowrap;

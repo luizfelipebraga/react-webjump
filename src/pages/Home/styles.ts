@@ -23,6 +23,10 @@ export const Aside = styled.aside`
   flex-direction: column;
   gap: 1rem;
 
+  @media (max-width: 380px) {
+    display: none;
+  }
+
   a {
     list-style: square inside !important;
     color: #000;
@@ -37,6 +41,10 @@ export const Banner = styled.div`
   background-color: var(--textGray);
   width: 100%;
   height: 20rem;
+
+  @media (max-width: 320px) {
+    height: 5rem;
+  }
 `;
 
 export const Content = styled.div`
