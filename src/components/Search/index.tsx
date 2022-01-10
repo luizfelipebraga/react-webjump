@@ -5,7 +5,11 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   color: string;
 }
 
-export function SearchInput({ color, ...props }: InputProps) {
+function Filter() {
+
+}
+
+function SearchInput({ color, ...props }: InputProps) {
   return (
     <BoxInputSearch>
       <InputStyled {...props} />
@@ -13,3 +17,5 @@ export function SearchInput({ color, ...props }: InputProps) {
     </BoxInputSearch>
   );
 }
+
+export {SearchInput, Filter}

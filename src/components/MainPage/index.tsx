@@ -115,6 +115,7 @@ export function MainPageComponent(props: CatalogoProps) {
   }, [props.id]);
 
   const [list, setList] = useState<ListProps[]>([]);
+  const [searchItem, setSearchItem] = useState<string>('');
   const [order, setOrder] = useState<string>("price");
 
   return (
@@ -182,7 +183,11 @@ export function MainPageComponent(props: CatalogoProps) {
           </BoxSelect>
 
           <Grid>
-            {list.map((item, index) => {
+            {list.filter((item) => {
+              if(searchItem == "") return item
+              if(item.name.toLocaleLowerCase().includes(searchItem.toLocaleLowerCase())) return item
+            })
+            .map((item, index) => {
               return (
                 <CardCategory
                   key={index}
