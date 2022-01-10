@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CardCategory } from "../../components/Card";
+import { CardCategory } from "../Card";
 import { api } from "../../services/api";
 import {
   Container,
@@ -19,6 +19,7 @@ import {
   CaixaAzul,
   BoxSelect,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 interface ListProps {
   id: number;
@@ -34,7 +35,7 @@ interface CatalogoProps {
   image: string;
 }
 
-export function Catalogo(props: CatalogoProps) {
+export function MainPageComponent(props: CatalogoProps) {
   const typeCategory = [
     {
       id: "1",
@@ -98,8 +99,6 @@ export function Catalogo(props: CatalogoProps) {
     },
   ];
 
-  
-
   useEffect(() => {
     function ListAll() {
       api
@@ -133,9 +132,9 @@ export function Catalogo(props: CatalogoProps) {
             <SubTitle>categorias</SubTitle>
             <List>
               {typeCategory.map((category) => (
-                <a key={category.id} href={category.path}>
+                <Link key={category.id} to={category.path}>
                   {category.name}
-                </a>
+                </Link>
               ))}
             </List>
           </Box>
@@ -154,7 +153,7 @@ export function Catalogo(props: CatalogoProps) {
 
             <List>
               {typeSneaker.map((sneaker) => {
-                return <a key={sneaker.id} href="#">{sneaker.name}</a>;
+                return <span key={sneaker.id}>{sneaker.name}</span>;
               })}
             </List>
           </Box>

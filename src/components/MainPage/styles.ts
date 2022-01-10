@@ -12,7 +12,6 @@ export const PagRef = styled.div`
   margin-bottom: 2rem;
   padding: 0 1rem;
 
-
   span {
     &:first-child {
       color: #00a8a9;
@@ -44,7 +43,7 @@ export const Aside = styled.aside`
   width: 18rem;
   align-self: stretch;
 
-  border: 1px solid #E2DEDC;
+  border: 1px solid #e2dedc;
   padding: 1rem;
 
   @media (max-width: 480px) {
@@ -79,9 +78,27 @@ export const List = styled.div`
       -webkit-border-radius: 7.5px;
       border-radius: 7.5px;
       background-color: #626262;
-      margin-right: .8rem;
-      margin-bottom: .15rem;
+      margin-right: 0.8rem;
+      margin-bottom: 0.15rem;
       cursor: default;
+    }
+  }
+
+  span {
+    color: #626262;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px;
+      border-radius: 7.5px;
+      background-color: #626262;
+      margin-right: 0.8rem;
+      margin-bottom: 0.15rem;
     }
   }
 `;
@@ -146,7 +163,7 @@ export const BoxSelect = styled.div`
   gap: 1rem;
 
   span {
-    font-size: .8rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     color: #808185;
     font-weight: var(--textBold);
@@ -157,17 +174,17 @@ export const OrderByPrice = styled.select`
   color: #000;
   width: 10rem;
   background-color: #ffffff;
-  border: 1px solid #E2DEDC;
+  border: 1px solid #e2dedc;
   font-size: 1rem;
   border-radius: 5px;
 `;
 
 export const Grid = styled.div`
-    list-style: none;
-    padding: 0 1rem;
-    margin: 50px 0px 0px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 18px;
-    position: relative;
+  list-style: none;
+  padding: 0 1rem;
+  margin: 50px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 18px;
+  position: relative;
 `;

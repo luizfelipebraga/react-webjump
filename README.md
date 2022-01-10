@@ -1,6 +1,18 @@
 # Projeto Teste.
 
-`yarn install` ou `npm install` para instalar os pacotes
+```
+yarn install 
+```
+
+ou
+
+```
+npm install 
+```
+
+### Para instalar os pacotes 
+
+#
 
  ## Tecnologias e Pacotes:
 
@@ -13,6 +25,8 @@
 [x] axios
 
 [x] styled-components
+
+[x] react-icons
 
 #
 
