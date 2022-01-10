@@ -29,22 +29,22 @@ export function SubNav() {
   return (
     <Container>
       <Nav isOpen={isOpen}>
-        <Mobile>
+        <Mobile isOpen={isOpen}>
           {isOpen ? (
-            <HambuerIcon size={30} onClick={() => setIsOpen(!isOpen)} />
-          ) : (
             <CloseIcon size={30} onClick={() => setIsOpen(!isOpen)} />
+          ) : (
+            <HambuerIcon size={30} onClick={() => setIsOpen(!isOpen)} />
           )}
           <ul>
-            <Link to="/">Página Inicial</Link>
+            <Link to="/" onClick={() => setIsOpen(false)}>Página Inicial</Link>
             {menu.map((menu) => {
               return (
-                <Link key={menu.id} to={`/${menu.path}`}>
+                <Link key={menu.id} to={`/${menu.path}`} onClick={() => setIsOpen(false)}>
                   {menu.name}
                 </Link>
               );
             })}
-            <Link to="/contato">Contato</Link>
+            <Link to="/contato" onClick={() => setIsOpen(false)}>Contato</Link>
           </ul>
         </Mobile>
       </Nav>

@@ -16,32 +16,17 @@ export const Nav = styled.nav<TypeNav>`
   margin: 0 auto;
 
   padding: 1.5rem 2rem;
+`;
 
-  @media (max-width: 1024px) {
-    gap: 5rem;
-  }
-
-  @media (max-width: 480px) {
-    ul {
-      display: ${(props) => (props.isOpen ? "flex" : "none")};
-      height: 100%;
-      margin: 0 auto;
-      justify-content: space-evenly;
-      flex-direction: column;
-      height: ${(props) => (props.isOpen ? "100vh" : "0")};
-      width: ${(props) => (props.isOpen ? "100vw" : "0")};
-
-      padding: 2rem 0;
-
-      transition: all 0.3s ease-in;
-    }
-  }
-
-  ul {    
+export const Mobile = styled.div<TypeNav>`
+  ul {
     display: flex;
-    justify-content: center;
-    gap: 7rem;
-    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    transition: all 0.3s ease-in;
   }
 
   a {
@@ -64,29 +49,33 @@ export const Nav = styled.nav<TypeNav>`
       background: #fff;
     }
   }
-`;
 
-export const Mobile = styled.div`
-  display: flex;
-  gap: 7rem;
-  position: relative;
-  flex-direction: row;
-
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 100%;
-    height: 100vh;
+
+    ul {
+      display: ${(props) => (props.isOpen ? "flex" : "none")} !important;
+      flex-direction: column;
+      height: 100%;
+      margin: 0 auto;
+      flex-direction: column !important;
+      height: ${(props) => (props.isOpen ? "40vh" : "0")};
+
+      transition: all 0.3s ease-in;
+    }
   }
 `;
 
 export const HambuerIcon = styled(GiHamburgerMenu)`
   display: none;
-  fill: #ffb464;
-  height: 3rem;
+  fill: #fff;
+  height: 2rem;
   cursor: pointer;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
     display: block;
     align-items: right;
     margin-right: 2rem;
@@ -95,11 +84,11 @@ export const HambuerIcon = styled(GiHamburgerMenu)`
 
 export const CloseIcon = styled(AiOutlineClose)`
   display: none;
-  fill: #ffb464;
+  fill: #fff;
   height: 3rem;
   cursor: pointer;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
     display: block;
     align-items: right;
     margin-right: 2rem;
