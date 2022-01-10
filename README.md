@@ -14,7 +14,7 @@ npm install
 
 #
 
- ## Tecnologias e Pacotes:
+ ## Tecnologias/Pacotes e Boas Práticas:
 
 [x] React
 
@@ -54,7 +54,7 @@ npm install
 #
 
 ## Rodar o Backend 
- - Para uma melhor experiência, inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
+ - Para uma melhor experiência inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
 #
 
 ## Adendos do projeto
