@@ -7,9 +7,9 @@ export function NavBar() {
     <Container>
       <AuthBar>
         <BoxAuth>
-          <a href="">Acesse sua Conta</a>
+          <span>Acesse sua Conta</span>
           <span>ou</span>
-          <a href="">Cadastre-se</a>
+          <span>Cadastre-se</span>
         </BoxAuth>
       </AuthBar>
 

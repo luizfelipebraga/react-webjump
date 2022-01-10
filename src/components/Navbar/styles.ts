@@ -20,13 +20,11 @@ export const BoxAuth = styled.div`
   margin: 0 auto;
   padding: 0.5rem 2rem;
 
-  a,
   span {
+    cursor: pointer;
     color: var(--textWhite);
-    :not(span) {
-      font-weight: 800;
-      text-decoration: underline;
-    }
+    font-weight: 800;
+    text-decoration: underline;
   }
 `;
 
@@ -70,5 +68,5 @@ export const Logo = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    }
+  }
 `;

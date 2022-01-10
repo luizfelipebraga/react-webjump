@@ -12,6 +12,10 @@ npm install
 
 ### Para instalar os pacotes 
 
+## Observação Rodar o Backend 
+ - Para uma melhor experiência inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
+#
+
 #
 
  ## Tecnologias/Pacotes e Boas Práticas:
