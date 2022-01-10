@@ -25,6 +25,7 @@ export const PagRef = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  min-height: 700px;
   gap: 2rem;
   flex-direction: row;
 
