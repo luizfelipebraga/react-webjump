@@ -1,7 +1,7 @@
 import { useMemo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
-import { Container, Nav } from "./styles";
+import { Container, Nav, Mobile, HambuerIcon, CloseIcon} from "./styles";
 
 interface NavProps {
   id: number;
@@ -15,6 +15,7 @@ export function SubNav() {
   }, []);
 
   const [menu, setMenu] = useState<NavProps[]>([]);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const getList = () => {
     api
@@ -24,19 +25,26 @@ export function SubNav() {
       })
       .catch((err) => console.error(err));
   };
-  
+
   return (
     <Container>
       <Nav>
-        <Link to="/">Página Inicial</Link>
-        {menu.map((menu) => {
-          return (
-            <Link key={menu.id} to={`/${menu.path}`}>
-              {menu.name}
-            </Link>
-          );
-        })}
-        <Link to="/contato">Contato</Link>
+        <Mobile>
+          {isOpen ? (
+            <HambuerIcon size={30} onClick={setIsOpen(!isOpen)} />
+          ) : (
+            <CloseIcon size={30} onClick={setIsOpen(!isOpen)} />
+          )}
+          <Link to="/">Página Inicial</Link>
+          {menu.map((menu) => {
+            return (
+              <Link key={menu.id} to={`/${menu.path}`}>
+                {menu.name}
+              </Link>
+            );
+          })}
+          <Link to="/contato">Contato</Link>
+        </Mobile>
       </Nav>
     </Container>
   );
