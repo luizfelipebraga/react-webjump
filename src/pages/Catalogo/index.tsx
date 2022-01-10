@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CardCategory } from "../../components/Card";
-import { api } from "../../services/api";
+import { api, apiImages } from "../../services/api";
 import {
   Container,
   PagRef,
@@ -28,9 +28,9 @@ interface ListProps {
   path: string;
 }
 
-type ImageProps = {
+type ImagemProps = {
   image: string;
-}
+};
 
 interface CatalogoProps {
   title?: string;
@@ -106,7 +106,6 @@ export function Catalogo(props: CatalogoProps) {
       .get(props.id)
       .then((resp) => {
         setList(resp.data.items);
-        setImagem(resp.data.items.image);
       })
       .catch((err) => console.error(err));
   }
@@ -119,7 +118,6 @@ export function Catalogo(props: CatalogoProps) {
   }, []);
 
   const [list, setList] = useState<ListProps[]>([]);
-  const [imagem, setImagem] = useState<string>('');
   const [order, setOrder] = useState<string>("price");
 
   return (
@@ -137,7 +135,9 @@ export function Catalogo(props: CatalogoProps) {
             <SubTitle>categorias</SubTitle>
             <List>
               {typeCategory.map((category) => (
-                <a key={category.id} href={category.path}>{category.name}</a>
+                <a key={category.id} href={category.path}>
+                  {category.name}
+                </a>
               ))}
             </List>
           </Box>
@@ -184,13 +184,16 @@ export function Catalogo(props: CatalogoProps) {
           </BoxSelect>
 
           <Grid>
-            {
-              list.map((item, index) => {
-                const GetImage = item.image;
-
-                return <CardCategory key={index} image={item.image} name={item.name} price={item.price}/>
-              })
-            }
+            {list.map((item, index) => {
+              return (
+                <CardCategory
+                  key={index}
+                  image={item.image}
+                  name={item.name}
+                  price={item.price}
+                />
+              );
+            })}
           </Grid>
         </Main>
       </Content>
