@@ -167,6 +167,7 @@ export function Catalogo(props: CatalogoProps) {
           <hr />
 
           <BoxSelect>
+            <span>Ordernar Por</span>
             <OrderByPrice
               name="selectOrder"
               id="selectOrder"

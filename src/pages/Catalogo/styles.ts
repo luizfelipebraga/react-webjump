@@ -126,26 +126,36 @@ export const CaixaAzul = styled.div`
 
 export const BoxSelect = styled.div`
   width: 100%;
-
+  padding: 0 1rem;
+  margin-top: 1rem;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  gap: 1rem;
+
+  span {
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #808185;
+    font-weight: var(--textBold);
+  }
 `;
 
 export const OrderByPrice = styled.select`
   color: #000;
   width: 10rem;
   background-color: #ffffff;
-  border: 1px solid var(--black);
+  border: 1px solid #E2DEDC;
   font-size: 1rem;
-  margin-top: 1rem;
+  border-radius: 5px;
 `;
 
 export const Grid = styled.div`
     list-style: none;
-    padding: 0px;
+    padding: 0 1rem;
     margin: 50px 0px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 18px;
     position: relative;
 `;
