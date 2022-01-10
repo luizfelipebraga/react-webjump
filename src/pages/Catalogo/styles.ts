@@ -140,4 +140,12 @@ export const OrderByPrice = styled.select`
   margin-top: 1rem;
 `;
 
-export const Grid = styled.div``;
+export const Grid = styled.div`
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    position: relative;
+`;

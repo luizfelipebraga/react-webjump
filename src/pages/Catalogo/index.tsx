@@ -28,6 +28,10 @@ interface ListProps {
   path: string;
 }
 
+type ImageProps = {
+  image: string;
+}
+
 interface CatalogoProps {
   title?: string;
   id: string;
@@ -102,6 +106,7 @@ export function Catalogo(props: CatalogoProps) {
       .get(props.id)
       .then((resp) => {
         setList(resp.data.items);
+        setImagem(resp.data.items.image);
       })
       .catch((err) => console.error(err));
   }
@@ -114,7 +119,7 @@ export function Catalogo(props: CatalogoProps) {
   }, []);
 
   const [list, setList] = useState<ListProps[]>([]);
-  console.log(list);
+  const [imagem, setImagem] = useState<string>('');
   const [order, setOrder] = useState<string>("price");
 
   return (
@@ -178,7 +183,15 @@ export function Catalogo(props: CatalogoProps) {
             </OrderByPrice>
           </BoxSelect>
 
-          <Grid></Grid>
+          <Grid>
+            {
+              list.map((item, index) => {
+                const GetImage = item.image;
+
+                return <CardCategory key={index} image={item.image} name={item.name} price={item.price}/>
+              })
+            }
+          </Grid>
         </Main>
       </Content>
     </Container>

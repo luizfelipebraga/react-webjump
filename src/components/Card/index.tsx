@@ -1,18 +1,23 @@
-import { Container, Img, Name, Price, BuyButton } from "./styles";
+import { Container, Img, Name, Price, BuyButton, Box1, Box2 } from "./styles";
 
 type CardProps = {
-  img: string;
+  image: string;
   name: string;
-  price: string;
+  price: number;
 };
 
-export function CardCategory({img, name, price}: CardProps) {
+export function CardCategory({ image, name, price }: CardProps) {
   return (
     <Container>
-      <Img>{img}</Img>
-      <Name>{name}</Name>
-      <Price>{price}</Price>
-      <BuyButton>Comprar</BuyButton>
+      <Box1>
+        <Img src={image} alt="image" />
+        <Name>{name}</Name>
+      </Box1>
+
+      <Box2>
+        <Price>R${price}</Price>
+        <BuyButton type="submit" value="Comprar" />
+      </Box2>
     </Container>
   );
 }
