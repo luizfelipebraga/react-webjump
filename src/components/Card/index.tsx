@@ -1,7 +1,5 @@
 import { Container, Img, Name, Price, BuyButton, Box1, Box2 } from "./styles";
 
-
-
 type CardProps = {
   image?: string;
   name: string;
@@ -14,7 +12,7 @@ export function CardCategory({ image, name, price }: CardProps) {
   return (
     <Container>
       <Box1>
-        <Img src={img} alt="image" />
+        <Img src={image} alt="image" />
         <Name>{name}</Name>
       </Box1>
 
