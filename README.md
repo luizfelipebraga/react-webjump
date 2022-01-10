@@ -1,4 +1,4 @@
-# Projeto Teste.
+# Projeto WebJump.
 
 ```
 yarn install 
@@ -10,11 +10,11 @@ ou
 npm install 
 ```
 
-### Para instalar os pacotes 
-
-## Observação Rodar o Backend 
- - Para uma melhor experiência inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
+Para instalar os pacotes 
 #
+
+## Obs: Rodar o Backend 
+ - Para uma melhor experiência inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
 
 #
 
@@ -55,10 +55,6 @@ npm install
 [x] Qualidade
 
 [x] Fidelidade ao Layout
-#
-
-## Rodar o Backend 
- - Para uma melhor experiência inicialize o backend, pois parte da navbar e os cards foram feitos pelo backend, exceto a ixibição das imagens, como dito antes, é randômico.
 #
 
 ## Adendos do projeto
