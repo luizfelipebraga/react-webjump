@@ -66,7 +66,7 @@ export const Logo = styled.div`
     }
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 480px) {
     display: flex;
     width: 100%;
     justify-content: center;

@@ -28,8 +28,9 @@ export const Box2 = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  height: 10rem;
+  height: 12rem;
   border: 1px solid var(--textGray);
+  object-fit: cover;
 `;
 
 export const Name = styled.span`

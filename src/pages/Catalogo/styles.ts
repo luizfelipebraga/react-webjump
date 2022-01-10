@@ -10,6 +10,8 @@ export const PagRef = styled.div`
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 2rem;
+  padding: 0 1rem;
+
 
   span {
     &:first-child {
@@ -29,6 +31,11 @@ export const Content = styled.div`
 
   height: 100%;
   width: 100%;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
 `;
 
 export const Aside = styled.aside`
@@ -39,6 +46,11 @@ export const Aside = styled.aside`
 
   border: 1px solid #E2DEDC;
   padding: 1rem;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 0 2rem;
+  }
 `;
 
 export const AsideTitle = styled.span`

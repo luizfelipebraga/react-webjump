@@ -1,16 +1,20 @@
 import { Container, Img, Name, Price, BuyButton, Box1, Box2 } from "./styles";
 
+
+
 type CardProps = {
-  image: string;
+  image?: string;
   name: string;
   price: number;
 };
+
+const img = "https://images.lojanike.com.br/1200x630/produto/tenis-nike-revolution-5-icon-clash-feminino-BQ3207-002-1.jpg"
 
 export function CardCategory({ image, name, price }: CardProps) {
   return (
     <Container>
       <Box1>
-        <Img src={image} alt="image" />
+        <Img src={img} alt="image" />
         <Name>{name}</Name>
       </Box1>
 
