@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CardCategory } from "../../components/Card";
-import { api, apiImages } from "../../services/api";
+import { api } from "../../services/api";
 import {
   Container,
   PagRef,
@@ -28,13 +28,10 @@ interface ListProps {
   path: string;
 }
 
-type ImagemProps = {
-  image: string;
-};
-
 interface CatalogoProps {
   title?: string;
   id: string;
+  image: string;
 }
 
 export function Catalogo(props: CatalogoProps) {
@@ -101,21 +98,22 @@ export function Catalogo(props: CatalogoProps) {
     },
   ];
 
-  function ListAll() {
-    api
-      .get(props.id)
-      .then((resp) => {
-        setList(resp.data.items);
-      })
-      .catch((err) => console.error(err));
-  }
+  
 
   useEffect(() => {
+    function ListAll() {
+      api
+        .get(props.id)
+        .then((resp) => {
+          setList(resp.data.items);
+        })
+        .catch((err) => console.error(err));
+    }
     ListAll();
     return () => {
       setList([]);
     };
-  }, []);
+  }, [props.id]);
 
   const [list, setList] = useState<ListProps[]>([]);
   const [order, setOrder] = useState<string>("price");
@@ -156,7 +154,7 @@ export function Catalogo(props: CatalogoProps) {
 
             <List>
               {typeSneaker.map((sneaker) => {
-                return <a key={sneaker.id}>{sneaker.name}</a>;
+                return <a key={sneaker.id} href="#">{sneaker.name}</a>;
               })}
             </List>
           </Box>
@@ -189,7 +187,7 @@ export function Catalogo(props: CatalogoProps) {
               return (
                 <CardCategory
                   key={index}
-                  image={item.image}
+                  image={props.image}
                   name={item.name}
                   price={item.price}
                 />
