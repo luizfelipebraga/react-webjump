@@ -1,7 +1,7 @@
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
-import { Container, Nav, Mobile, HambuerIcon, CloseIcon} from "./styles";
+import { Container, Nav, Mobile, HambuerIcon, CloseIcon } from "./styles";
 
 interface NavProps {
   id: number;
@@ -28,22 +28,24 @@ export function SubNav() {
 
   return (
     <Container>
-      <Nav>
+      <Nav isOpen={isOpen}>
         <Mobile>
           {isOpen ? (
-            <HambuerIcon size={30} onClick={setIsOpen(!isOpen)} />
+            <HambuerIcon size={30} onClick={() => setIsOpen(!isOpen)} />
           ) : (
-            <CloseIcon size={30} onClick={setIsOpen(!isOpen)} />
+            <CloseIcon size={30} onClick={() => setIsOpen(!isOpen)} />
           )}
-          <Link to="/">Página Inicial</Link>
-          {menu.map((menu) => {
-            return (
-              <Link key={menu.id} to={`/${menu.path}`}>
-                {menu.name}
-              </Link>
-            );
-          })}
-          <Link to="/contato">Contato</Link>
+          <ul>
+            <Link to="/">Página Inicial</Link>
+            {menu.map((menu) => {
+              return (
+                <Link key={menu.id} to={`/${menu.path}`}>
+                  {menu.name}
+                </Link>
+              );
+            })}
+            <Link to="/contato">Contato</Link>
+          </ul>
         </Mobile>
       </Nav>
     </Container>

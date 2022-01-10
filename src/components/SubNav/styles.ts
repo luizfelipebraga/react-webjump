@@ -7,12 +7,13 @@ export const Container = styled.header`
   background: var(--darkRed);
 `;
 
-export const Nav = styled.nav`
+interface TypeNav {
+  isOpen: boolean;
+}
+
+export const Nav = styled.nav<TypeNav>`
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  gap: 7rem;
-  align-items: center;
 
   padding: 1.5rem 2rem;
 
@@ -21,7 +22,26 @@ export const Nav = styled.nav`
   }
 
   @media (max-width: 480px) {
-    display: none;
+    ul {
+      display: ${(props) => (props.isOpen ? "flex" : "none")};
+      height: 100%;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      flex-direction: column;
+      height: ${(props) => (props.isOpen ? "100vh" : "0")};
+      width: ${(props) => (props.isOpen ? "100vw" : "0")};
+
+      padding: 2rem 0;
+
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  ul {    
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    align-items: center;
   }
 
   a {
@@ -47,7 +67,10 @@ export const Nav = styled.nav`
 `;
 
 export const Mobile = styled.div`
-  display: none;
+  display: flex;
+  gap: 7rem;
+  position: relative;
+  flex-direction: row;
 
   @media (max-width: 480px) {
     display: flex;
