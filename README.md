@@ -29,7 +29,10 @@ cd frontend
 npm start || yarn start
 ```
 
-Para instalar os pacotes e dependências.
+Depois disso, o Frontend deverá rodar no seguinte endereço:
+```
+Local:  http://localhost:3000
+```
 
 
 ## Obs: Rodar o Backend 
