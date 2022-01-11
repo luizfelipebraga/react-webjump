@@ -1,16 +1,38 @@
 # Projeto WebJump.
 
+Entre nas pastas backend e frontend e instale os pacotes com:
+
+| | -> significa ' ou '
 ```
-yarn install 
+cd backend
+
+yarn install || npm install
+
+cd ..
+
+cd frontend 
+
+yarn install || npm install
 ```
 
-ou
-
+Abra um terminal para iniciar o backend:
 ```
-npm install 
+cd backend
+
+npm start || yarn start
 ```
 
-Para instalar os pacotes e dependências.
+Abra outro terminal para inicar o frontend:
+```
+cd frontend
+
+npm start || yarn start
+```
+
+Depois disso, o Frontend deverá rodar no seguinte endereço:
+```
+Local:  http://localhost:3000
+```
 
 
 ## Obs: Rodar o Backend 
