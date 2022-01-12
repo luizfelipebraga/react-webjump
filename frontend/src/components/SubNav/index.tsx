@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { API } from "../../env";
 import { api } from "../../services/api";
 import { Container, Nav, Mobile, HambuerIcon, CloseIcon } from "./styles";
 
@@ -19,7 +20,7 @@ export function SubNav() {
 
   const getList = () => {
     api
-      .get("/list")
+      .get(API.LIST)
       .then((resp) => {
         setMenu(resp.data.items);
       })
