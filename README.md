@@ -22,7 +22,7 @@ cd backend
 npm start || yarn start
 ```
 
-Abra outro terminal para inicar o frontend:
+Abra outro terminal para iniciar o frontend:
 ```
 cd frontend
 
